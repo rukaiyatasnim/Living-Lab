@@ -27,30 +27,23 @@
         font-weight: weight;
         font-style: normal;
       }
-
-    /* Challenge Animation Part */
-    @layer utilities {
-    .animate-fade-in {
-      animation: fadeIn 3s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  }
-  
     </style>
   </head>
   <body class="sora-font">
     <header  class=" bg-gradient-to-t from-[#efebe4] to-[#fffefe]">
       <!-- Navbar Start -->
-      <nav>
+      <nav class="container mx-auto">
         <section
           class=" header px-6 lg:mx-32 flex justify-between items-center py-10 border border-[#179800] lg:border-none ">
           <!-- Navbar Logo -->
-          <div class="logo">
-            <img src="./assets/logo-header.png" alt="logo" />
+        <div class="logo hidden md:block">
+              <img src="./assets/logo-header.png" alt="logo" />
+          </div>
+
+          <!-- Responsive Logo Part -->
+
+          <div class="md:hidden">
+              <img class="text-left text-3xl" src="./assets/just-logo.png" alt="">
           </div>
 
           <!-- Navbar Menu Bar -->
@@ -77,10 +70,12 @@
             </button>
           </div>
 
-          <!-- Responsive Part -->
+          <!-- Responsive Bar Part -->
             <div class="lg:hidden text-3xl">
                 <i class="fa-solid fa-bars"></i>
             </div>
+
+            
 
         </div>
         </section>
@@ -89,7 +84,7 @@
          <div class=" mx-6 lg:mx-[140px] flex flex-col gap-4 justify-center items-center mt-8">
           <!-- Hero Text -->
            <div>
-          <h1 class="font-semibold text-2xl lg:text-5xl lg:mx-[300px] text-center animate-fade-in">
+          <h1 class="font-semibold text-2xl lg:text-5xl lg:mx-[300px] text-center animate-bounce">
               Freshness You 
               <span class="text-[#179800]">Can Count</span> On, Prices You’ll Love!
             </h1>
@@ -105,7 +100,40 @@
     </header>
     <main>
         <!-- Services Part Start -->
-   
+        <section class="my-36 flex flex-col gap-6 mx-6 lg:mx-36">
+        <h1 class="text-3xl text-[#179800] font-2xl font-medium">Service</h1>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="flex flex-col gap-4 items-center text-center bg-[#efebe4] p-6 rounded-[16px]">
+            <div class="bg-white rounded-full p-3 text-center">
+              <img src="./assets/service.png" alt="service" />
+            </div>
+            <h1 class="font-bold">24/7 Service</h1>
+            <p class="font-normal">
+             24/7 services provide constant support, ensuring availability at all hours, ready to assist with any need at any time, making it easier for customers to rely on continuous assistance
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 items-center text-center bg-[#efebe4] p-6 rounded-xl">
+            <div class="bg-white rounded-full p-3 text-center">
+              <img src="./assets/delivery.png" alt="delivery" />
+            </div>
+            <h1 class="font-bold">Fast Delivery</h1>
+            <p>
+             Fast delivery ensures that your orders reach you swiftly, providing a seamless experience from purchase to arrival, keeping your expectations met with speed and reliability."
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 items-center text-center bg-[#efebe4] p-6 rounded-xl">
+            <div class="bg-white rounded-full p-3 text-center">
+              <img src="./assets/healthy.png" alt="healthy" />
+            </div>
+            <h1 class="font-bold">Healthy Products</h1>
+            <p>
+              Experience fast delivery of fresh, organic, and nutritious healthy products to your doorstep!
+            </p>
+          </div>
+        </div>
+        </section>
         <!-- Services Part END -->
     </main>
     <footer></footer>
